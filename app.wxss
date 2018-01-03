@@ -1,3 +1,7 @@
+.btn-test{
+  width:300rpx;
+  height:100rpx;
+}
 /* reset */
 page {
   background-color: #F8F8F8;
@@ -27,7 +31,7 @@ form{
 /* page */
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   min-height: 100%;
   justify-content: space-between;
   font-size: 32rpx;

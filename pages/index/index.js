@@ -21,6 +21,36 @@ Page({
       url: '../scroll-view/scroll-view',
     })
   },
+  // btnView
+  btnView: function() {
+    wx.navigateTo({
+      url: '../button/button',
+    })
+  },
+  // checkboxview
+  boxView: function () {
+    wx.navigateTo({
+      url: '../checkbox/checkbox',
+    })
+  },
+  // formview
+  formView: function () {
+    wx.navigateTo({
+      url: '../form/form',
+    })
+  },
+  // iconview
+  iconView: function (){
+    wx.navigateTo({
+      url: '../icon/icon',
+    })
+  },
+  // imageView
+  imageView: function() {
+    wx.navigateTo({
+      url: '../image/image',
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

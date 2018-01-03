@@ -1,0 +1,17 @@
+<view class="container">
+
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">Local Image</view>
+      <view class="page-section-ctn">
+        <image class="image" mode='aspectFit' src="../images/1.jpg"/>
+      </view>
+    </view>
+    <view class="page-section page-section-gap">
+      <view class="page-section-title">Internet Image</view>
+      <view class="page-section-ctn">
+        <image class="image" mode='widthFix' src="{{src}}" bindload='loadHandler' binderror='errHandler'/>
+      </view>
+    </view>
+  </view>
+</view>

@@ -3,7 +3,11 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/scroll-view/scroll-view",
-    "pages/button/button"
+    "pages/button/button",
+    "pages/checkbox/checkbox",
+    "pages/form/form",
+    "pages/icon/icon",
+    "pages/image/image"
   ],
   "window":{
     "backgroundTextStyle":"light",
