@@ -7,4 +7,13 @@
   <button class="btn-test" bindtap='formView'>form</button>
   <button class="btn-test" bindtap='iconView'>icon</button>
   <button class="btn-test" bindtap='imageView'>image</button>
+  <navigator url='../map/map'>
+  <button class="btn-test">map</button>
+  </navigator>
+  <navigator url='../picker/picker'>
+  <button class="btn-test">picker</button>
+  </navigator>
+    <navigator url='../picker-view/picker-view'>
+  <button class="btn-test">picker-view</button>
+  </navigator>
 </view>

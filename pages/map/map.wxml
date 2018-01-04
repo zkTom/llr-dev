@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+      <map
+        style="width: 100%; height: 500px;"
+        show-location
+        latitude="{{latitude}}"
+        longitude="{{longitude}}"
+        markers="{{markers}}"
+        polyline="{{polyline}}"
+        controls='{{controls}}'
+        circles='{{circles}}'
+        bindcontroltap="controltap" 
+        bindmarkertap="markertap" 
+        bindregionchange="regionchange"
+        >
+      </map>
+    </view>
+  </view>
+</view>
