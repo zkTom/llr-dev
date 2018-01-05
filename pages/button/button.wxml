@@ -1,7 +1,8 @@
 <view class="container">
   <view class="page-body">
     <view class="btn-area" id="buttonContainer">
-      <button type="primary">页面主操作 Normal</button>
+
+
       <button type="primary" loading="true">页面主操作 Loading</button>
       <button type="primary" disabled="true">页面主操作 Disabled</button>
 

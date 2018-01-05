@@ -1,0 +1,17 @@
+<view>
+  <!-- banner图-->
+  <swiper class='banner' indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:for-item="item" wx:key="{{item.url}}">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--快速进入按钮-->
+  <view class="page-section">
+    <button type="primary" class='btn-find'>探索新服务</button>
+  </view>
+  <!--文本介绍-->
+</view>
