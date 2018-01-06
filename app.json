@@ -2,6 +2,8 @@
   "pages":[
     "ssp/person/person",
     "ssp/index/index",
+    "ssp/company-list/company-list",
+    "ssp/search/search",
     "pages/index/index",
     "pages/logs/logs",
     "pages/scroll-view/scroll-view",
@@ -24,11 +26,15 @@
     "list": [
       {
         "pagePath": "ssp/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "/public/images/tabbar/home.png",
+        "selectedIconPath": "/public/images/tabbar/home-on.png"
       },
       {
         "pagePath": "ssp/person/person",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "/public/images/tabbar/my.png",
+        "selectedIconPath": "/public/images/tabbar/my-on.png"
       }
     ]
   },

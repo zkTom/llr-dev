@@ -1,0 +1,11 @@
+<!--ssp/company-item/company-item.wxml-->
+<view class='company-item'>
+  <view class='company-pic-wrap'>
+    <image src="{{item.src}}"></image>
+  </view>
+  <view class='company-detail'>
+    <text class='company-name'>{{item.name}}</text>
+    <text class='company-introduction'>{{item.introduction}}</text>
+  </view>
+</view>
+

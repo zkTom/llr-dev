@@ -1,0 +1,29 @@
+/* ssp/company-item/company-item.wxss */
+.company-item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding:20rpx 0;
+  border-bottom: 1px solid #ccc;
+  padding-left: 20rpx;
+}
+.company-pic-wrap{
+  width: 128rpx;
+  height: 128rpx;
+  border:1px solid #ddd;
+}
+.company-detail{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.company-pic-wrap image{
+  max-height: 100%;
+  max-width: 100%;
+}
+.company-name{
+  font-size: 30rpx;
+}
+.company-introduction{
+  font-size: 24rpx;
+}

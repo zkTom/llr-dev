@@ -3,14 +3,19 @@
 Page({
   data: {
     imgUrls: [
-      {url:'/ssp/images/s1.jpg'},
-      {url:'/ssp/images/s2.jpg'},
-      {url:'/ssp/images/s3.jpg'}
+      {url:'/public/images/s1.jpg'},
+      { url:'/public/images/s2.jpg'},
+      { url:'/public/images/s3.jpg'}
     ],
     indicatorDots: true,
     autoplay: true,
     circular: true,
     interval: 5000,
     duration: 1000
+  },
+  findService() {
+    wx.navigateTo({
+      url: '../company-list/company-list',
+    })
   }
 })

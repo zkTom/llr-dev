@@ -1,7 +1,7 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true, 
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "1.7.2",
-	"appid": "wx2e75787e968b7262",  
+	"appid": "wx2e75787e968b7262",
 	"projectname": "llr-dev",
 	"condition": {
 		"search": {
@@ -21,8 +21,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "s's'p首页",
+					"pathName": "ssp/index/index",
+					"query": ""
+				}
+			]
 		}
 	}
 }

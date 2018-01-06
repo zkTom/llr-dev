@@ -1,7 +1,7 @@
 Page({
 
   data: {
-    defaultAvatar: '/ssp/images/avatar-default.png'  
+    defaultAvatar: '/public/images/avatar-default.png'  
   },
 
   /**

@@ -1,0 +1,8 @@
+/* ssp/company-list/company-list.wxss */
+.search-input{
+  border:1px solid #ccc;
+}
+.company-list{
+  display: flex;
+  flex-direction: column;
+}
