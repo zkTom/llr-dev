@@ -2,19 +2,26 @@
 <view class='container'>
  <!--位置展示-->
  <view class='location-detail'>
-  <text>当前位置：{{address}}</text>
+  <text bindtap='getCurrentLocation'>当前位置：{{address}}</text>
  </view>
  <!--快速定位当前-->
  <view class='get-location'>
-  <button bindtap='getLocation'>点击定位当前位置</button>
+  <button bindtap='chooseLocation'>点击定位当前位置</button>
  </view>
  <!--企业服务分类筛选-->
  <view class='search-wrap'>
-  <input class="search-input" name="input" type='text' confirm-type='搜索'
-  placeholder-style="color:#ddd" placeholder="快来找出你需要的服务吧" bindfocus='search' />
+    <view class='search'>
+      <image class='search-img' src='/public/images/search.png'></image>
+      <input type='text' class='search-input' placeholder='分类搜索' placeholder-class='placeholder'  value='{{inputKey}}' confirm-type='search' bindfocus='search' />
+    </view>
+    <text catchtap='onCloseTap'>取消</text>
   </view>
  <!--列表展示-->
  <view class='company-list'>
-  <company-item  wx:for='{{companyList}}' wx:key="item.name" item="item"></company-item>
+  <block  wx:for='{{companyList}}' wx:for-item="item" wx:key="item.name" >
+     <company-item src="{{item.src}}" name="{{item.name}}" 
+     introduction="{{item.introduction}}" address="{{item.address}}" 
+     distance="{{item.distance}}"></company-item> 
+  </block>
  </view>
 </view>

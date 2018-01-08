@@ -1,11 +1,12 @@
 <!--ssp/company-item/company-item.wxml-->
 <view class='company-item'>
   <view class='company-pic-wrap'>
-    <image src="{{item.src}}"></image>
+    <image src="{{src}}"></image>
   </view>
-  <view class='company-detail'>
-    <text class='company-name'>{{item.name}}</text>
-    <text class='company-introduction'>{{item.introduction}}</text>
+  <view class='company-detail' bindtap='toShop'>
+    <text class='company-name'>{{name}}({{address}})</text>
+    <text class='company-introduction'>{{introduction}}</text>
+    <text class='company-distance'>{{distance}}km</text>
   </view>
 </view>
 

@@ -13,6 +13,11 @@ Page({
     interval: 5000,
     duration: 1000
   },
+  onLoad: (options) => {
+  },
+  login: () => {
+    wx.login({});
+  },
   findService() {
     wx.navigateTo({
       url: '../company-list/company-list',

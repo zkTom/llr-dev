@@ -4,7 +4,8 @@
     <view class='img-wrap'>
       <image src='{{defaultAvatar}}' width='' height='' class='userInfo-avatar'></image>
     </view>
-    <text class='userInfo-nickname'>我的名字</text>
+    <text class='userInfo-nickname' wx:if="{{hasUserInfo}}">{{userInfo.username}}</text>
+    <text class='userInfo-nickname' wx:else bindtap='loginTap'>登陆</text>
   </view>
   <!--个人菜单-->
   <view class='menu'>

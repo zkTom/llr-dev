@@ -28,6 +28,12 @@
 					"name": "s's'p首页",
 					"pathName": "ssp/index/index",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "ssp门店列表",
+					"pathName": "ssp/company-list/company-list",
+					"query": ""
 				}
 			]
 		}

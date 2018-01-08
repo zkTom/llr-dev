@@ -14,4 +14,7 @@
     <button type="primary" bindtap='findService' class='btn-find'>探索新服务</button>
   </view>
   <!--文本介绍-->
+  <view class='page-section'>
+    <text style="padding:10rpx 20rpx;">在这里您可以找到便捷的找到一些服务，帮助您更好的生活。</text>
+  </view>
 </view>

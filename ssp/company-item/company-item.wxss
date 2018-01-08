@@ -6,6 +6,7 @@
   padding:20rpx 0;
   border-bottom: 1px solid #ccc;
   padding-left: 20rpx;
+  background-color: #fff;
 }
 .company-pic-wrap{
   width: 128rpx;
@@ -16,14 +17,23 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-left: 20rpx;
+  position: relative;
 }
 .company-pic-wrap image{
   max-height: 100%;
   max-width: 100%;
 }
 .company-name{
-  font-size: 30rpx;
+  font-size: 32rpx;
+  line-height: 1.5;
 }
 .company-introduction{
-  font-size: 24rpx;
+  font-size: 26rpx;
+   line-height: 1.5;
+}
+.company-distance{
+  position: absolute;
+  top: 40%;
+  right:30rpx;
 }

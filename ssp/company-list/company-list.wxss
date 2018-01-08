@@ -1,8 +1,57 @@
 /* ssp/company-list/company-list.wxss */
-.search-input{
-  border:1px solid #ccc;
+
+.location-detail{
+  margin:15rpx;
+  padding:10rpx 20rpx;
+  border:1px solid #666;
+  border-radius:60rpx;
 }
 .company-list{
   display: flex;
   flex-direction: column;
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15rpx 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.search {
+  display: flex;
+  padding: 19rpx;
+  box-sizing: border-box;
+  width: 590rpx;
+  height: 78rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #f2f2f2;
+  background-color: #fff;
+  border-radius: 40rpx;
+}
+
+.search-img {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.search-input {
+  flex: 1;
+  margin-top: -5rpx;
+  margin-left: 20rpx;
+  color: #666;
+}
+
+.placeholder {
+  color: #999;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.search-wrap text {
+  font-size: 32rpx;
+  color: #999;
 }

@@ -1,21 +1,24 @@
 // ssp/company-item/company-item.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-    
-    item: {
-      type: Object,
-      value: {
-        src: '',
-        name: '',
-        introduction: '',
-        observer: function (v1,v2) {
-          console.log(v1,v2)
-        }
+      url: {
+        type: String 
+      },
+      src: {
+       type: String 
+      },
+      name: {
+        type: String 
+      },
+      introduction:{
+        type: String 
+      },
+      address: {
+        type: String
+      },
+      distance:{
+        type: Number
       }
-    }
   },
 
   /**
@@ -29,6 +32,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toShop() {
+      console.log("门店跳转");
+      wx.navigateTo({ url: 'https://mp.weixin.qq.com/' })
+    }
   }
 })

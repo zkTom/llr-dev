@@ -11,10 +11,11 @@ let map = new QQMapWX({
   key: config.key
 });
 
-/**
- * 经纬度转化为具体地址描述
-*/
+
 let gdApi = {
+  /**
+   * 经纬度转化为具体地址描述
+  */
   showAddress: ({latitude = default_lat, longitude = default_lng}) => {
     
     return new Promise((resolve,reject) => {
@@ -27,7 +28,26 @@ let gdApi = {
         fail: err => reject(err)
       });
     })
-  }
+  },
+  /**
+   * 计算起始点到目标点的距离
+   * 默认情况下当前位置为起始点
+  */
+  calculateDistance: ((options) => {
+    let mode = options.mode || 'walking';
+    let to = options.to || [];
+    let from = options.from || {};
+
+    return new Promise((resolve, reject) => {
+      map.calculateDistance({
+        from:from,
+        mode: mode,
+        to: to,
+        success: res => resolve(res),
+        fail: err => reject(err)
+      });
+    })
+  })
 }
 
 export default gdApi;
