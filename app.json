@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "ssp/person/person",
     "ssp/index/index",
     "ssp/company-list/company-list",
@@ -16,11 +16,12 @@
     "pages/picker/picker",
     "pages/picker-view/picker-view"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [

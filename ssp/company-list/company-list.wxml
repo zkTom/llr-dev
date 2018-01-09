@@ -17,11 +17,13 @@
     <text catchtap='onCloseTap'>取消</text>
   </view>
  <!--列表展示-->
- <view class='company-list'>
-  <block  wx:for='{{companyList}}' wx:for-item="item" wx:key="item.name" >
-     <company-item src="{{item.src}}" name="{{item.name}}" 
-     introduction="{{item.introduction}}" address="{{item.address}}" 
-     distance="{{item.distance}}"></company-item> 
-  </block>
- </view>
+  <view class='company-list'>
+    <block wx:for='{{shopPage.list}}' wx:for-item="item" wx:key="item.name" >
+      <company-item src="{{item.src}}" name="{{item.name}}" 
+      introduction="{{item.introduction}}" address="{{item.address}}" 
+      distance="{{item.distance}}"></company-item> 
+    </block>
+  </view>
+  <loadmore is-bottom="{{!hasNextPage}}" wx:if="{{isLoad}}">
+  </loadmore>
 </view>

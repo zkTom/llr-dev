@@ -1,6 +1,8 @@
 import wxApi from '../../api/wxApi.js';
 import gdApi from '../../api/gdApi.js';
 import ShopApi from '../../api/ShopApi.js';
+import MyPage from "../..//model/Page.js";
+
 Page({
 
   /**
@@ -12,13 +14,16 @@ Page({
       longitude: ""
     },
     address: "",
-    companyList: []
+    shopPage: new MyPage(),
+    scrollHeight: "",
+    isLoad: false, // 加载更多
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setScrollHeight();
     wx.showLoading({
       title: '数据加载中...',
       mask: 'true'
@@ -48,8 +53,13 @@ Page({
         return ShopApi.getShopList();
       })
       .then(res => {
+        let shopPage = this.data.shopPage;
+        shopPage.list = res.list;
+        // shopPage.merge(new MyPage().as(res));
+        //let isBottom = shopPage.hasNextPage;
         this.setData({
-          companyList: res
+          shopPage:shopPage,
+          //hasNextPage: shopPage.hasNextPage
         })
         wx.hideLoading()
       })
@@ -61,7 +71,42 @@ Page({
       // 加载门店列表
 
   },
+  /**
+ * 页面相关事件处理函数--监听用户下拉动作
+ */
+  onPullDownRefresh: function (e) {
+    console.log('pulldown',e);
+  },
 
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    this.setData({
+      isLoad: true,
+      isBottom: false
+    })
+    // 加载数据
+    let timer = setTimeout(() => {
+      this.getShopList()
+        .then(res => {
+          this.setData({
+            isLoad: false,
+            isBottom: false // 通过返回信息计算而得的
+          })    
+        })
+    },500)
+  },
+  setScrollHeight() {
+    let ww = wx.getSystemInfoSync().windowWidth;
+    let wh = wx.getSystemInfoSync().windowHeight;
+    let scrollHight = Math.floor(750 / ww * wh);
+
+    this.setData({
+      scrollHeight: scrollHight
+    })
+  },
+  
   // 加载门店列表
   getShopList() {
     return ShopApi.getShopList()

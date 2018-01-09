@@ -1,6 +1,7 @@
 {
  "navigationBarTitleText": "附近商家",
   "usingComponents": {
-    "company-item": "../company-item/company-item"
+    "company-item": "../company-item/company-item",
+    "loadmore": "/base/loadmore/loadmore"
   }
 }

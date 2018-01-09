@@ -1,10 +1,10 @@
-import mockList from '../config/list.js';
+import mockPage from '../config/list.js';
 import mockCategoryList from '../config/cate.js';
 let ShopApi = {
   getShopList: () => {
 
     return new Promise((resolve, reject) => {
-      resolve(mockList);
+      resolve(mockPage);
     })
   },
 
